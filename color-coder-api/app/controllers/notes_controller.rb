@@ -1,12 +1,18 @@
 class NotesController < ApplicationController
     def index 
         notes = Note.all
-        render json: notes
+        options = {
+            include: [:color]
+        }
+        render json: NoteSerializer.new(notes, options)
     end 
 
     def show 
         note = Note.find_by(id: params[:id])
-        render json: note
-    end 
+        options = {
+            include: [:color]
+        }
+        render json: NoteSerializer.new(note, options)
+    end
     
 end
