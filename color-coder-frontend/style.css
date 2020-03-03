@@ -22,19 +22,20 @@
 /* Control the left side */
 .left {
   left: 0;
+
   background-color: gray;
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  background-color: white;
+  background-color: lightgray;
 }
 
 
 
 
-  /* ---------------------- CARD CSS-------------------------  */
+  /* ---------------------- ALL COLOR CARDS CSS-------------------------  */
   /* Top answer with 17 upvotes:   https://stackoverflow.com/questions/37502266/how-do-i-create-a-3x3-grid-via-css */
 
   .grid {
@@ -45,12 +46,41 @@
   }
   .cell {
     flex: 0 0 32%;                       /* don't grow, don't shrink, width */
-    height: 180px;
+    height: 185px;
     margin-bottom: 10px;
     background-color: #999;
   }
   .cell:nth-child(3n) {
     background-color: rgb(255, 167, 167);
+  }
+
+
+  /* ---------------------- ONE COLOR SHOWING ALL ITS NOTES CSS-------------------------  */
+  /* Top answer with 17 upvotes:   https://stackoverflow.com/questions/37502266/how-do-i-create-a-3x3-grid-via-css */
+
+  .color-has-many-notes {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    
+  }
+  .note-cell {
+    flex: 0 0 100%;                       /* don't grow, don't shrink, width */
+    height: 185px;
+    margin-bottom: 10px;
+    background-color: #999;
+  }
+
+  .note-title {
+    background-color: white ;
+
+  }
+
+  .note-content {
+  }
+
+  .note-cell:nth-child(2n) {
+    background-color: rgb(197, 197, 197);
   }
 
 
