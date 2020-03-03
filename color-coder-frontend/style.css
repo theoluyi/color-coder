@@ -1,3 +1,56 @@
-h1 {
-    color: black;
+
+
+  body {background-color: white;}
+  body {color: black;}
+  h1 {color: navy; }
+  
+
+    /* ---------------------- SPLIT SCREEN CSS-------------------------  */
+    /* https://www.w3schools.com/howto/howto_css_split_screen.asp */
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: gray;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: white;
+}
+
+
+
+
+  /* ---------------------- CARD CSS-------------------------  */
+  /* Top answer with 17 upvotes:   https://stackoverflow.com/questions/37502266/how-do-i-create-a-3x3-grid-via-css */
+
+  .grid {
+    display: flex;                       /* establish flex container */
+    flex-wrap: wrap;                     /* enable flex items to wrap */
+    justify-content: space-around;
+    
   }
+  .cell {
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+    height: 180px;
+    margin-bottom: 10px;
+    background-color: #999;
+  }
+  .cell:nth-child(3n) {
+    background-color: rgb(255, 167, 167);
+  }
+
+

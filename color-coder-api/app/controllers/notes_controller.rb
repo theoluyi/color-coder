@@ -4,7 +4,8 @@ class NotesController < ApplicationController
         options = {
             include: [:color]
         }
-        render json: NoteSerializer.new(notes, options)
+        render json: notes
+        # NoteSerializer.new(notes, options)
     end 
 
     def show 
@@ -12,7 +13,8 @@ class NotesController < ApplicationController
         options = {
             include: [:color]
         }
-        render json: NoteSerializer.new(note, options)
+        render json: note
+        # NoteSerializer.new(note, options)
     end
     
 end

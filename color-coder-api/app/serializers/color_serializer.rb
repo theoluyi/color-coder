@@ -1,5 +1,4 @@
-class ColorSerializer
-  include FastJsonapi::ObjectSerializer
-  attributes :name, :hexcode_i, :hexcode_ii
-  has_many :notes
+class ColorSerializer < ActiveModel::Serializer
+  attributes :id, :name, :hexcode_i, :hexcode_ii
+  has_many :notes, serializer: NestedNotesSerializer
 end

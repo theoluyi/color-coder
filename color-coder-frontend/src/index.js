@@ -1,10 +1,13 @@
-// console.log("you found me :P")
+console.log("you found your index.js file! :P")
 
-
-function fetchColors() {
-    fetch("http://localhost:3000/colors/") 
+const colors = function fetchColors() {
+    return fetch("http://localhost:3000/colors/") 
     .then(resp => resp.json())
-    .then(json => console.log(json))
+    .then(jsonObj => jsonObj.forEach(obj => colorOntoDom(obj)))
 }
 
-fetchColors()
+colors()
+
+function colorOntoDom(obj) {
+    createColorObj
+}

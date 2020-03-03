@@ -1,5 +1,5 @@
-class NoteSerializer
-  include FastJsonapi::ObjectSerializer
-  attributes :color, :title, :content, :created_at, :updated_at
+class NoteSerializer < ActiveModel::Serializer
+  attributes :id, :title, :content, :created_at, :updated_at, :color
   belongs_to :color
+  # ,  serializer: ColorSerializer
 end
