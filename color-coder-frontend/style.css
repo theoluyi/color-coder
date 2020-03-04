@@ -38,19 +38,22 @@
   /* ---------------------- ALL COLOR CARDS CSS-------------------------  */
   /* Top answer with 17 upvotes:   https://stackoverflow.com/questions/37502266/how-do-i-create-a-3x3-grid-via-css */
 
-  .grid {
+  .color-grid {
     display: flex;                       /* establish flex container */
     flex-wrap: wrap;                     /* enable flex items to wrap */
     justify-content: space-around;
     
   }
-  .cell {
-    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+  .color-cell {
+    /* flex: 0 0 32%;                       don't grow, don't shrink, width */
+    float: left;
+    width: 185px;
     height: 185px;
     margin-bottom: 10px;
+    margin-left: 10px;
     background-color: #999;
   }
-  .cell:nth-child(3n) {
+  .color-cell:nth-child(3n) {
     background-color: rgb(255, 167, 167);
   }
 
