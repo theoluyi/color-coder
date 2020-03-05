@@ -75,6 +75,7 @@ function renderNoteOnColorShowPage(note) {
 const deleteNoteFromDB = (event, newNote) => {
     // console.log("Look at you, you clicked the delete button! I'm proud of you.")
     console.log(event.target.parentNode.id)
+    
     const noteID = event.target.parentNode.id
 
     const url = `http://localhost:3000/notes/${noteID}`
@@ -144,3 +145,5 @@ const postNewNote = (newNoteObj) => {
 // this is frontend, I want to do backend first 
 // also, I need to know where this note is going, which color, which split screen 
 // (are we rendering it immediately in the right-side note detail (not yet setup), or just in the color's notes on left-side)
+
+
